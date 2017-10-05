@@ -1,5 +1,5 @@
 ## home cost calculator ##
-print ("lets calculate how long it will take to save up for a house")
+print ("lets calculate how long it will take to save up for a house deposit")
 #input variables#
 annual_salary   = float(input ("Enter your annual salary: "))
 portion_saved   = float(input("Enter the percent of your salary to save, as a decimal: "))
