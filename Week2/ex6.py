@@ -2,14 +2,15 @@
 
 
 #define variables and prompt for them
+print ("Please input the following data followed by enter")
 print ("Enter your name")
 name            = input ('-->')
 print ("how old are you?")
-age             = input ('-->')            
+age             = input (int)
 print ("how tall are you? (in inches)")
-height_inches   = input ('-->')             #inches
+height_inches   = input ('int')             #inches
 print ("how much do you weigh? (in pounds)")
-weight_pounds   = input ('-->')             #pounds
+weight_pounds   = input ('int')             #pounds
 
 print ("what colour are your eyes?")
 eyes            = input ('-->')
@@ -17,7 +18,7 @@ eyes            = input ('-->')
 print ("what colour is your hair?")
 hair            = input ('-->')
 
-heavy           = weight_pounds > 3000 #sets boolean output on is_heavy based on my_weight being greater than 3000
+heavy           = weight_pounds > 3000 #sets boolean output on heavy based on weight_pounds being greater than 3000
 sigma_i           = age + height_inches + weight_pounds
 
 ##output##
