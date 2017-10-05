@@ -1,21 +1,12 @@
 ## input tests ##
 #define variables and prompt for them
 print ("Please input the following data followed by enter")
-print ("Enter your name")
-name            = input ('-->')
-print ("how old are you?")
-age             = int(input ('-->'))
-
-print ("how tall are you? (in inches)")
-height_inches   = int(input ('-->'))  #inches
-print ("how much do you weigh? (in pounds)")
-weight_pounds   = int(input ('-->'))          #pounds
-
-print ("what colour are your eyes?")
-eyes            = input ('-->')
-
-print ("what colour is your hair?")
-hair            = input ('-->')
+name            = input ('Enter your name: ')
+age             = int(input ('how old are you?: '))
+height_inches   = int(input ("in inches, how tall are you?: ")) #inches
+weight_pounds   = int(input ("in pounds, how much do you weigh?: "))          #pounds
+eyes            = input ("what colour are your eyes?: ")
+hair            = input ("what colour is your hair?: ")
 heavy           = weight_pounds > 3000 #sets boolean output on heavy based on weight_pounds being greater than 3000
 sigma_i         = age + height_inches + weight_pounds
 
