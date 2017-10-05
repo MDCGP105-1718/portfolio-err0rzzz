@@ -42,7 +42,7 @@ print(f"If I add {age}, {height_cm} and {weight_kg} I get {sigma_m}")
 
 ##checks##
 ##retirement check##
-if 18 < age < 75:
+if age > 17 and age < 75:
     print ("you're of working age")
 elif age < 17:
     print ("you're too young to work!")
@@ -53,7 +53,7 @@ else:
 print (f"your BMI is {bmi}")
 if bmi < 18.5:
     print ("this is underweight")
-elif 18.5 <= bmi < 25:
+elif bmi >= 18.5 and bmi < 25:
     print ("this is a healthy BMI")
 elif 25 <= bmi < 30:
     print ("this is above ideal range")
