@@ -1,4 +1,4 @@
-## this is the Bisection search example from the lecture slides ##
+## this is the Bisection search example from the lecture slides ## 
 
 cube = 27                               #number to find root of
 epsilon = 0.01                          #acceptable margin of error
