@@ -51,5 +51,3 @@ while abs(current_savings - deposit) <= epsilon:  #start a loop which checks if 
 
 print('num_guesses =', num_guesses)                 #output number of iterations
 print(savings_rate, 'is the rate at which you need to save')   #output answer
-
-while months_passed < total_months:
