@@ -9,10 +9,13 @@ def f_fizzbuzz(x):
     if x %3 == 0:
         if x %5 == 0:
             print ("fizzbuzz")
-        else print ("Fizz")
+        else:
+            print ("Fizz")
     elif x %5 == 0:
         print ("Buzz")
-    else print (x)
+    else:
+        print (x)
+        
     return x
 
 while (x<100):
