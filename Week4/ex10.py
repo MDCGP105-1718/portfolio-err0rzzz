@@ -15,9 +15,9 @@ def f_fizzbuzz(x):
         print ("Buzz")
     else:
         print (x)
-        
+
     return x
 
-while (x<100):
+while (x<101):
     f_fizzbuzz(x)
     x += 1
