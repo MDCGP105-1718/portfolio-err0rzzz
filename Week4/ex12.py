@@ -9,5 +9,8 @@ def hotel_cost (nights):
     return total_hotel_cost
 
 def planet_ticket_cost(city, )
+<<<<<<< HEAD
 
 #chk
+=======
+>>>>>>> ad89de2b7986943f7ae814d0c9acd9c050691c14
