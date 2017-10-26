@@ -4,10 +4,12 @@
 # You don't need to understand this helper code,
 # but you will have to know how to use the functions
 # (so be sure to read the docstrings!)
+
 import random
 import string
 
 WORDLIST_FILENAME = "words.txt"
+answer = False
 
 def load_words():
     """
@@ -54,8 +56,18 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+for n in range (10):
+        def remove_dups(L1, L2):
+            letters_guessed = tempcheck[:]
+            for e in tempcheck:
+                if e in secret_word:
+                    ##output##
+
+    if secret_word = letters_guessed:
+        answer = True
+    else:
+        answer = False
+return(answer)
 
 
 
