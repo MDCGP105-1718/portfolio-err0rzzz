@@ -5,6 +5,18 @@
 # but you will have to know how to use the functions
 # (so be sure to read the docstrings!)
 
+#      RANDOM WORD - (convert word to a list of letters)
+#      DISPLAY - X X X X X for word and a score counter visualies with ASCII art.
+# 
+#     INPUT GUESSED ---->  check the input vs  previously guessed letters and then each letter in the chain
+#        PROCESS INPUTS  ----> for each correct letter replace the X in the output string with the correct letter
+#                                                               OR
+#                                  mark a point as incorrect on the hangman
+#
+#     CHECKS: are all the lives used? is the word correct?
+#
+
+
 import random
 import string
 
