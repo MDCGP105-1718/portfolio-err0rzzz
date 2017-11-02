@@ -8,6 +8,6 @@ def fib(n):
     else:
         return fib(n-1) + fib(n-2)
 
-print (fib(9))
-#for n in range (20):
-#    print (fib(n))
+#print (fib(9))
+for n in range (20):
+    print (fib(n))
