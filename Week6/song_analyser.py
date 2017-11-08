@@ -126,19 +126,34 @@ def toChars(s):
             res = res + c
     return res
 
+
+# def isOverThresh(j): #takes a dictonary assigns the temp name j to it
+#     for i in j:      # for each item in k
+#         if occurances =< x.values():   #checks if its value is =< than the occurance number we asked for
+#             result = result + x     #if it is then we add that to the output_words
+#     return result
+
 lyrics = lyrics.replace('\n', ' ') #converts all line breaks into spaces
 lyrics = toChars(lyrics) #remove all unwanted symbols from string
 lyric_list = lyrics.split()
-
-# print (lyric_list)
+search_freq = int(input ('minimum threshold for word occurances?: '))
 
 words_freq = {}
+output_words = []
 
+### for each word in the list it checks if its already in the dictionary
 for word in lyric_list:
-    if word not in words_freq:
+    if word not in words_freq: ## if its not the key is created and value set to one
         words_freq[word] = 1
     else:
-        words_freq[word] += 1
+        words_freq[word] += 1 ## if it is the value for that key is increased by 1
 
-for word in words_freq.keys():
-    print(word ,words_freq[word])
+
+for word, freq in words_freq.items():
+    if freq >= search_freq:
+        output_words.append((freq,word))
+output_words.sort()
+output_words.reverse()
+
+for freq, word in output_words:
+     print(word,freq)
