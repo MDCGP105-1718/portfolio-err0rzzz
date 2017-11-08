@@ -126,6 +126,7 @@ def toChars(s):
             res = res + c
     return res
 
+lyrics = lyrics.replace('\n', ' ') #converts all line breaks into spaces
 lyrics = toChars(lyrics) #remove all unwanted symbols from string
 lyric_list = lyrics.split()
 
