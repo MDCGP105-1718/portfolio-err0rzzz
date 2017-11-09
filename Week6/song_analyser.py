@@ -118,22 +118,24 @@ And that's what it is
 Now everybody dance."""
 
 
-def toChars(s):
-    s = s.lower()
+
+def toChars(raw_string):
+    '''
+    input: raw_string data
+    output: string data in lowercase with all non alphabet removed
+    and spaces retained. converts line breaks to spaces.
+    '''
+    raw_string = raw_string.lower()
+    raw_string = raw_string.replace('\n', ' ') #converts all line breaks into spaces
+
     res = ''
-    for c in s:
-        if c in 'abcdefghijklmnopqrstuvwxyz ':
-            res = res + c
+    for char in raw_string:
+        if char in 'abcdefghijklmnopqrstuvwxyz ':
+            res = res + char
     return res
 
 
-# def isOverThresh(j): #takes a dictonary assigns the temp name j to it
-#     for i in j:      # for each item in k
-#         if occurances =< x.values():   #checks if its value is =< than the occurance number we asked for
-#             result = result + x     #if it is then we add that to the output_words
-#     return result
 
-lyrics = lyrics.replace('\n', ' ') #converts all line breaks into spaces
 lyrics = toChars(lyrics) #remove all unwanted symbols from string
 lyric_list = lyrics.split()
 search_freq = int(input ('minimum threshold for word occurances?: '))
