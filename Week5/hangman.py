@@ -7,7 +7,7 @@
 
 #      RANDOM WORD - (convert word to a list of letters)
 #      DISPLAY - X X X X X for word and a score counter visualies with ASCII art.
-# 
+#
 #     INPUT GUESSED ---->  check the input vs  previously guessed letters and then each letter in the chain
 #        PROCESS INPUTS  ----> for each correct letter replace the X in the output string with the correct letter
 #                                                               OR
@@ -68,18 +68,12 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-for n in range (10):
-        def remove_dups(L1, L2):
-            letters_guessed = tempcheck[:]
-            for e in tempcheck:
-                if e in secret_word:
-                    ##output##
 
-    if secret_word = letters_guessed:
-        answer = True
-    else:
-        answer = False
-return(answer)
+    count = 0
+    for letter in letters_guessed:
+        if letter in secret_word:
+            count += 1
+    return count == len(secret_word)
 
 
 
@@ -90,7 +84,8 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters, underscores (_), and spaces that represents
       which letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
+    for letter in letters_guessed:
+        #f
     pass
 
 
