@@ -22,7 +22,10 @@ class Room(object):
       #     self.items[item_name] = 1
 
     def test_output(self):
-        return ("room name = " + str(self.room_name) + "\n" + "description = " + str(self.description) + "\n" + 'Items = <broken> ' + "\n" + 'Exits = ' + ', '.join(self.exits))
+        item_return =[]
+        for i in self.items:
+            item_return.append(i.item_name)
+        return ("room name = " + str(self.room_name) + "\n" + "description = " + str(self.description) + "\n" + 'Items = ' + str(item_return) + "\n" + 'Exits = ' + ', '.join(self.exits))
 
 #define player class (possibly not needed)
 class Peasant(object):
@@ -85,8 +88,10 @@ ugly_statue = Item("a large ugly statue", "the statue is of a forgotten deity so
 ############
 
 #tavern
-tavernInventory = []
-tavernInventory.append(beer) #['beer', 'unhelpful_ally']
+
+tavernInventory = [beer, unhelpful_ally]
+# tavernInventory = []
+# tavernInventory.append(beer) #['beer', 'unhelpful_ally']
 tavernExits = {}
 tavern = Room('Tavern', "A dirty, musky tavern", tavernInventory, tavernExits)
 
@@ -142,13 +147,13 @@ gate.add_exit("south", field)
 
 field.add_exit("north", gate)
 
-# ## tests
-# print ("\n")
-# print(tavern.test_output())
-# print ("\n")
-# print(beer.test_item())
-# print ("\n")
-# print ("\n")
+## tests
+print ("\n")
+print(tavern.test_output())
+print ("\n")
+print(beer.test_item())
+print ("\n")
+print ("\n")
 
 
 ##################################
