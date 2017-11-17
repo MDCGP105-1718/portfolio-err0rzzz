@@ -5,117 +5,38 @@
 # step 2:
 
 lyrics = """
-Just somethin' about you
-Way I'm lookin at you whatever
-keep lookin at me
-Gettin' scared now, right?
-Don't fear me baby, it's just Justin
-It feel good right?
-Listen
+I get up, and nothing gets me down.
+You got it tough. I've seen the toughest all around.
+And I know, baby, just how you feel.
+You've got to roll with the punches to get to what's real
+Oh can't you see me standing here,
+I've got my back against the record machine
+I ain't the worst that you've seen.
+Oh can't you see what I mean?
+Might as well jump. Jump!
+Might as well jump.
+Go ahead, jump. Jump!
+Go ahead, jump.
+Aaa-ohh Hey you! Who said that?
+Baby how you been?
+You say you don't know, you won't know until you begin.
+Well can't you see me standing here,
+I've got my back against the record machine
+I ain't the worst that you've seen.
+Oh can't you see what I mean?
+Might as well jump. Jump!
+Go ahead, jump.
+Might as well jump. Jump!
+Go ahead, jump.
 
-I kind of noticed something wasn't right
-In your colorful face
-It's kind of weird to me
-Since you're so fine
-If it's up to me your face'll change......
+[Guitar solo]
 
-If you smilin', that should set the tone
-Just be limber
-And If you let go, the music should groove your bones
-Just remember
-Sing this song with me
+[Keyboard solo]
 
-Ain't nobody love you like I love you
-You're a good girl and that's what makes me trust ya
-Late at night, I talk to you
-You will know the difference when I touch you
-
-People are so phony
-Nosy cause they're lonely
-Aren't you sick of the same thing?
-They say so and so was dating
-Love you or they're hating
-When it doesn't matter anyway
-Cause we're here tonight
-
-If you smiling, that should set the tone
-Just be limber baby
-And If you let go, the music should groove your bones
-Baby just remember
-Sing this song with me
-
-Ain't nobody love you like I love you
-You're a good girl and that's what makes me trust ya
-Late at night, I talk to you
-You will know the difference when I touch you
-
-Yeah, you know I can make ya happy
-I could change your life
-If you give me that chance
-To be your man
-I won't let you down baby
-If you give me that chance
-To be your man
-Here baby, put on my jacket
-And then ...
-
-Maybe we'll fly the night away (I just wanna love you baby)
-Yeah, yeah, yeah
-Girl
-Maybe we'll fly the night away(I just wanna love you baby)
-Girl ...
-
-Ma, what you wanna do?
-I'm in front of you
-Grab a friend, see I can have fun with two
-Or me and you put on a stage show
-And the mall kids, that's how to change low
-From them you heard "wow, it's the same glow"
-Look at me, I say "yeah, it's the same dough"
-We the same type, you my air of life
-You have me sleeping in the same bed, every night
-
-Go rock with me, you deserve the best
-Take a few shots
-Let it burn in your chest
-We could ride down
-Pumping N.E.R.D. in the deck
-Funny how a few words turn into sex
-Play this free, joint called "brain"
-(I just love your, Brain)
-Ma, take a hint
-Make me suerve in the lane
-The name Malicious
-And I burn every track
-Clipse and J. Timberlake
-Now how heavy is that?
-
-Maybe we'll fly the night away (I just wanna love you baby)
-Yeah, yeah, yeah
-Girl
-Maybe we'll fly the night away(I just wanna love you baby)
-Girl ...
-
-Ain't nobody love you like I love you
-(Can't love you like I do)
-You're a good girl and that's what makes me trust ya
-(Trust ya like I do)
-Late at night, I talk to you
-(Hey)
-You will know the difference when I
-
-Break this down
-
-You know, I used to dream about this when I was a
-little boy
-I never thought it would end up this way, Drums
-(Hey)
-It's kind of special right? yeah
-You know, you think about it
-Sometimes people just destined
-Destined to do what they do
-And that's what it is
-Now everybody dance."""
+Might as well jump. Jump!
+Go ahead, jump.
+Get it and jump. Jump!
+Go ahead, jump. """
 
 
 
@@ -135,7 +56,7 @@ def toChars(raw_string):
     return res
 
 
-
+##main program
 lyrics = toChars(lyrics) #remove all unwanted symbols from string
 lyric_list = lyrics.split()
 search_freq = int(input ('minimum threshold for word occurances?: '))
