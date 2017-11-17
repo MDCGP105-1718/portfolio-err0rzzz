@@ -15,7 +15,7 @@ class Room(object):
       #     self.items[item_name] = 1
 
     def test_output(self):
-        return ("room name = " + str(self.room_name) + "\n" + "description = " + str(self.description) + "\n" + 'Items = ' + ', ' self.items + "\n" + 'Exits = ' + ', '.join(self.exits))
+        return ("room name = " + str(self.room_name) + "\n" + "description = " + str(self.description) + "\n" + 'Items = <broken> ' + "\n" + 'Exits = ' + ', '.join(self.exits))
 
 #define player class (possibly not needed)
 class Peasant(object):
@@ -26,7 +26,7 @@ class Peasant(object):
 
 #define item class
 class Item(object):
-    def __init__(self, item_name, item_description, carriable, location):
+    def __init__(self, item_name, item_description, carriable):
         self.item_name = item_name;
         self.item_description = item_description;
         self.carriable = bool(carriable);
@@ -34,8 +34,8 @@ class Item(object):
 #Itemlist each item defined for each room
 
 #tavernInventory = ['beer', 'unhelpful ally']
-beer = Item("beer", "it's a bit stale, but still does the job", True, Tavern)
-unhelpful_ally = Item("unhelpful ally", "I have absoloutley no idea what possible use he could be...", True, Tavern)
+beer = Item("beer", "it's a bit stale, but still does the job", True)
+unhelpful_ally = Item("unhelpful ally", "I have absoloutley no idea what possible use he could be...", True)
 
 #squareInventory = ['rabble', 'a disgruntled Knight', 'well']
 rabble = Item("rabble", "no king, hero or savior could keep this lot happy", False)
@@ -130,5 +130,5 @@ print(tavern.test_output())
 
 
 # ## main game loop##
-current_room = tavern
+curent_room = tavern
 print ("you find yourself in a " + curent_room(self.room_name))
