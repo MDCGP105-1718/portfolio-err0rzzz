@@ -1,6 +1,13 @@
 
+
+
+##################
+##set up classes##
+##################
+
 ##set up the classes required for the project
 #define room class
+
 class Room(object):
     def __init__(self, room_name, description, items, exits):
         self.room_name = room_name;
@@ -31,7 +38,13 @@ class Item(object):
         self.item_description = item_description;
         self.carriable = bool(carriable);
 
-#Itemlist each item defined for each room
+    def test_item(self):
+        return ("I'm a " + str(self.item_name) + ". My description is: " + str(self.item_description) + ". it is " + str(self.carriable) +" to say that I can be picked up.")
+
+###############
+## Item list###
+###############
+#sorted by room for ease
 
 #tavernInventory = ['beer', 'unhelpful ally']
 beer = Item("beer", "it's a bit stale, but still does the job", True)
@@ -67,14 +80,17 @@ threatening_snake = Item("a threatening snake", "this snake looks like it would 
 ambigious_mushrooms = Item("a small cluster of ambigious mushrooms", "you can't identify these and have no knowlege of mushrooms", True)
 ugly_statue = Item("a large ugly statue", "the statue is of a forgotten deity so worn by age its truly unpleasant to look at", False)
 
+############
+##Roomlist##
+############
 
-##Roomlist
 #tavern
 tavernInventory = []
 tavernInventory.append(beer) #['beer', 'unhelpful_ally']
 tavernExits = {}
 tavern = Room('Tavern', "A dirty, musky tavern", tavernInventory, tavernExits)
 
+#townSquare
 squareInventory = ['rabble', 'a disgruntled Knight', 'well']
 squareExits = {}
 townSquare = Room('The Town Square', "The town square has seen better days, but still does it's job.", squareInventory, squareExits)
@@ -84,7 +100,7 @@ stableInventory = ['hay', 'more hay', 'horse', 'unwell horse', 'stable hand']
 stableExits = {}
 stable = Room('a stable', "the stable is a tad rundown but still houses two horses", squareInventory, squareExits)
 
-#ransacked house
+#house
 houseInventory = ['desk', 'chest']
 houseExits = {}
 house = Room('a ransacked house', "this house has been robbed without mercy" , houseInventory, houseExits)
@@ -124,11 +140,39 @@ gate.add_exit("north", townSquare)
 gate.add_exit("west", house)
 gate.add_exit("south", field)
 
-## test
-print(tavern.test_output())
+field.add_exit("north", gate)
+
+# ## tests
+# print ("\n")
+# print(tavern.test_output())
+# print ("\n")
+# print(beer.test_item())
+# print ("\n")
+# print ("\n")
+
+
+##################################
+## set up main game paramaters ###
+##################################
+
+isgameover = False
 
 
 
-# ## main game loop##
+#define starting room
 curent_room = tavern
-print ("you find yourself in a " + curent_room(self.room_name))
+
+####################
+### main game loop##
+####################
+
+while isgameover == False:
+    print ("you find yourself in a "+ curent_room.room_name +"\n\n\n")
+
+    playercommand = input ()
+
+    if playercommand == "end":
+        isgameover = True
+
+    if playercommand == "look":
+        print ("you look arround yourself and see " + curent_room.description + "there are exits to the current_room.""\n\n\n")
