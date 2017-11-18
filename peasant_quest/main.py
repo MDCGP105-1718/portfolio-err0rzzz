@@ -96,22 +96,22 @@ tavernExits = {}
 tavern = Room('Tavern', "A dirty, musky tavern", tavernInventory, tavernExits)
 
 #townSquare
-squareInventory = ['rabble', 'a disgruntled Knight', 'well']
+squareInventory = [rabble, knight, well]
 squareExits = {}
 townSquare = Room('The Town Square', "The town square has seen better days, but still does it's job.", squareInventory, squareExits)
 
 #stable
-stableInventory = ['hay', 'more hay', 'horse', 'unwell horse', 'stable hand']
+stableInventory = [hay, more_hay, horse, unwell_horse, stable_hand]
 stableExits = {}
-stable = Room('a stable', "the stable is a tad rundown but still houses two horses", squareInventory, squareExits)
+stable = Room('a stable', "the stable is a tad rundown but still houses two horses", stableInventory, stableExits)
 
 #house
-houseInventory = ['desk', 'chest']
+houseInventory = [desk, chest]
 houseExits = {}
 house = Room('a ransacked house', "this house has been robbed without mercy" , houseInventory, houseExits)
 
 #alley
-alleyInventory = ['old barrel']
+alleyInventory = [old_barrel]
 alleyExits = {}
 alley = Room('a dimly lit alleyway', "this alleyway is an L shape and leads between the residential district and the town gate" , alleyInventory, alleyExits)
 
@@ -120,7 +120,7 @@ gateInventory = [drunken_guard, broken_drawbridge]
 gateExits = {}
 gate = Room('the cities main gateway', "this gate is the closest thing to a 'last line of defence' that the city has." , gateInventory, gateExits)
 
-fieldInventory = ['threatening snake, ambigious mushrooms, ugly statue']
+fieldInventory = [threatening_snake, ambigious_mushrooms, ugly_statue]
 fieldExits = {}
 field = Room('a large field', "this field surrounds the city" , fieldInventory, fieldExits)
 
@@ -147,13 +147,16 @@ gate.add_exit("south", field)
 
 field.add_exit("north", gate)
 
-## tests
-# print ("\n")
-# print(tavern.test_output())
-# print ("\n")
-# print(beer.test_item())
-# print ("\n")
-# print ("\n")
+#################
+## class tests ##
+#################
+#can be used to test any Room or Item
+print ("\n")
+print(stable.test_output())
+print ("\n")
+print(beer.test_item())
+print ("\n")
+print ("\n")
 
 
 ##################################
@@ -166,7 +169,7 @@ isgameover = False
 
 #define starting room
 current_room = tavern
-
+command_list = ['look','go north','go south','go west','go east']
 
 ####################
 ### main game loop##
@@ -178,20 +181,63 @@ while isgameover == False:
     for direction in current_room.exits:
         viable_exits.append(direction)
 
-    print ("\n\n\nyou find yourself in a "+ current_room.room_name +"\n\n\n")
+    current_room_items = []
+    for item in current_room.items:
+        current_room_items.append(item)
+
+    print ("\nyou find yourself in a "+ current_room.room_name +"\n")
 
     playercommand = input ()
+    playercommand = playercommand.lower()
 
-
-
-
+##basic quit commands
 
     if playercommand == "end":
         isgameover = True
+    if playercommand == "quit":
+        isgameover = True
+    if playercommand == "exit":
+        isgameover = True
 
     if playercommand == "look":
-        print ("you look arround yourself and see " + current_room.description + "there are exits to the " + str(current_room.room_name) + " on the " + str(current_room.exits))
+        print ("\nyou look arround yourself and see " + current_room.description + " there are exits to the " + str(current_room.room_name) + " on the " + str(viable_exits))
+        print ("the things of note that you can see are " + str(current_room_items)
+
+    if playercommand not in command_list:
+        print ('the peasant does not know that command, the commands he knows are: ' + str(command_list))
+    else:
+        pass
+
+##############
+## movement ##
+##############
+#checks if the requested direction is a viable direction, if so takes the key from the exits dictionary in the current room at sets it as the new current_room
+#then it resets the viable exits as empty for the new room.
 
     if playercommand == 'go south':
         if 'south' in viable_exits:
             current_room = current_room.exits['south']
+            viable_exits = []
+        else:
+            print ("you can't go that way.")
+
+    if playercommand == 'go west':
+        if 'west' in viable_exits:
+            current_room = current_room.exits['west']
+            viable_exits = []
+        else:
+            print ("you can't go that way.")
+
+    if playercommand == 'go north':
+        if 'north' in viable_exits:
+            current_room = current_room.exits['north']
+            viable_exits = []
+        else:
+            print ("you can't go that way.")
+
+    if playercommand == 'go east':
+        if 'east' in viable_exits:
+            current_room = current_room.exits['east']
+            viable_exits = []
+        else:
+            print ("you can't go that way.")
