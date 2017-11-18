@@ -148,12 +148,12 @@ gate.add_exit("south", field)
 field.add_exit("north", gate)
 
 ## tests
-print ("\n")
-print(tavern.test_output())
-print ("\n")
-print(beer.test_item())
-print ("\n")
-print ("\n")
+# print ("\n")
+# print(tavern.test_output())
+# print ("\n")
+# print(beer.test_item())
+# print ("\n")
+# print ("\n")
 
 
 ##################################
@@ -165,19 +165,33 @@ isgameover = False
 
 
 #define starting room
-curent_room = tavern
+current_room = tavern
+
 
 ####################
 ### main game loop##
 ####################
 
 while isgameover == False:
-    print ("you find yourself in a "+ curent_room.room_name +"\n\n\n")
+
+    viable_exits = []
+    for direction in current_room.exits:
+        viable_exits.append(direction)
+
+    print ("\n\n\nyou find yourself in a "+ current_room.room_name +"\n\n\n")
 
     playercommand = input ()
+
+
+
+
 
     if playercommand == "end":
         isgameover = True
 
     if playercommand == "look":
-        print ("you look arround yourself and see " + curent_room.description + "there are exits to the current_room.""\n\n\n")
+        print ("you look arround yourself and see " + current_room.description + "there are exits to the " + str(current_room.room_name) + " on the " + str(current_room.exits))
+
+    if playercommand == 'go south':
+        if 'south' in viable_exits:
+            current_room = current_room.exits['south']
