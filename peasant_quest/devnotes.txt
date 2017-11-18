@@ -1,0 +1,16 @@
+1. issues displaying lists as a string nicely, can't seem to get the .join function working
+
+strange bug:                             ^
+PS C:\Users\err0rz\portfolio-err0rzzz\peasant_quest> python main.py
+  File "main.py", line 206
+    if playercommand not in command_list:
+                                        ^
+SyntaxError: invalid syntax
+
+
+playercommand = input ()
+playercommand = playercommand.lower()
+command_list = ['look','go north','go south','go west','go east']
+
+if playercommand not in command_list:
+    print ('the peasant does not know that command, the commands he knows are: ' + str(command_list))
