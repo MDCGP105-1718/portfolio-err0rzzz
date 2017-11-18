@@ -176,7 +176,6 @@ command_list = ['look','go north','go south','go west','go east']
 ####################
 
 while isgameover == False:
-
     viable_exits = []
     for direction in current_room.exits:
         viable_exits.append(direction)
@@ -203,10 +202,8 @@ while isgameover == False:
         print ("\nyou look arround yourself and see " + current_room.description + " there are exits to the " + str(current_room.room_name) + " on the " + str(viable_exits))
         print ("the things of note that you can see are " + str(current_room_items)
 
-    # if playercommand not in command_list:
-    #     print ('the peasant does not know that command, the commands he knows are: ' + str(command_list))
-    # else:
-    #     pass
+    if playercommand not in command_list:
+        print ('the peasant does not know that command, the commands he knows are: ' + str(command_list))
 
 ##############
 ## movement ##
