@@ -200,7 +200,7 @@ while isgameover == False:
 
     if playercommand == "look":
         print ("\nyou look arround yourself and see " + current_room.description + " there are exits to the " + str(current_room.room_name) + " on the " + str(viable_exits))
-        print ("the things of note that you can see are " + str(current_room_items)
+        print ("the things of note that you can see are " + str(current_room_items))
 
     if playercommand not in command_list:
         print ('the peasant does not know that command, the commands he knows are: ' + str(command_list))
