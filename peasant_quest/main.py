@@ -151,12 +151,12 @@ field.add_exit("north", gate)
 ## class tests ##
 #################
 #can be used to test any Room or Item
-print ("\n")
-print(stable.test_output())
-print ("\n")
-print(beer.test_item())
-print ("\n")
-print ("\n")
+# print ("\n")
+# print(stable.test_output())
+# print ("\n")
+# print(unhelpful_ally.test_item())
+# print ("\n")
+# print ("\n")
 
 
 ##################################
@@ -175,12 +175,16 @@ command_list = ['look','go north','go south','go west','go east']
 ### main game loop##
 ####################
 
-while isgameover == False:
+while isgameover == False: # sets game loop condition
+
+
+## sets up variables to be used in current room
     viable_exits = []
     for direction in current_room.exits:
         viable_exits.append(direction)
 
     current_room_items = []
+    current_room_items_names = []
     for item in current_room.items:
         current_room_items.append(item)
 
