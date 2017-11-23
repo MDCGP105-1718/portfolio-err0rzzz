@@ -21,12 +21,18 @@ deck = []     #deck as a list
 
 
 ##build deck with loop
+
+used_numbers= []
+
 def build_deck():
     for n in range(4):
         for s in range(13):
             # deck.append((Card(s,n), random.randint(0,51)))                #deck as a list
-            randint = randomint()
-            deck.append((random.randint(0,10000), (Card(s,n))))
+            randint = randomint(0,52)
+            if radint not in used_numbers:
+                deck.append((randint), (Card(s,n))))
+            else:
+
             # deck[Card(s,n)] = random.randint(0,51)      #deck as a dictionary with card as key and place in deck as value
 
 build_deck()
