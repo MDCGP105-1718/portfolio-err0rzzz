@@ -150,13 +150,13 @@ field.add_exit("north", gate)
 #################
 ## class tests ##
 #################
-#can be used to test any Room or Item
-# print ("\n")
-# print(stable.test_output())
-# print ("\n")
-# print(unhelpful_ally.test_item())
-# print ("\n")
-# print ("\n")
+# can be used to test any Room or Item
+print ("\n")
+print(stable.test_output())
+print ("\n")
+print(unhelpful_ally.test_item())
+print ("\n")
+print ("\n")
 
 
 ##################################
