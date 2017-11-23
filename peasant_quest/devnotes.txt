@@ -1,4 +1,5 @@
-1. issues displaying lists as a string nicely, can't seem to get the .join function working
+1. <FIXED>
+issues displaying lists as a string nicely, can't seem to get the .join function working
 
 strange bug:                             ^
 PS C:\Users\err0rz\portfolio-err0rzzz\peasant_quest> python main.py
